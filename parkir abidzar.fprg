@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="parkir abidzar"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-24 03:42:36 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI0OzAzOjI1OjU2IFBNOzIxMTM="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI0OzAzOjQyOjM2IFBNOzE7MjIxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="jeniskendaraan" type="String" array="False" size=""/>
+            <declare name="lamaparkir, totalbiaya, tarifawal, tariftambahan" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan jenis kendaraan (motor/mobil): &quot;" newline="True"/>
+            <input variable="jeniskendaraan"/>
+            <output expression="&quot;masukkan lama parkir (jam): &quot;" newline="True"/>
+            <input variable="lamaparkir"/>
+            <if expression="jeniskendaraan == &quot;motor&quot; || jeniskendaraan == &quot;motor&quot;">
+                <then>
+                    <assign variable="tarifawal" expression="2000"/>
+                    <assign variable="tariftambahan" expression="1000"/>
+                </then>
+                <else>
+                    <assign variable="tarifawal" expression="5000"/>
+                    <assign variable="tariftambahan" expression="2000"/>
+                </else>
+            </if>
+            <if expression="lamaparkir &lt;= 1">
+                <then>
+                    <assign variable="totalbiaya" expression="tarifawal"/>
+                </then>
+                <else>
+                    <assign variable="totalbiaya" expression="tarifawal + (lamaparkir - 1) * tariftambahan"/>
+                </else>
+            </if>
+            <output expression="&quot;total biaya parkir: Rp &quot; &amp; totalbiaya" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

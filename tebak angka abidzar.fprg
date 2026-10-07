@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tebak angka abidzar"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-24 05:26:49 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI0OzA0OjQ1OjU3IFBNOzIxMTc="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI0OzA1OjI2OjQ5IFBNOzE7MjIyNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="target, tebakan, percobaan" type="Integer" array="False" size=""/>
+            <declare name="menang" type="Boolean" array="False" size=""/>
+            <assign variable="percobaan" expression="0"/>
+            <assign variable="menang" expression="False"/>
+            <assign variable="target" expression="Random(100) + 1"/>
+            <while expression="(percobaan &lt; 7) AND (menang == False)">
+                <input variable="tebakan"/>
+                <assign variable="percobaan" expression="percobaan + 1"/>
+                <if expression="tebakan == target">
+                    <then>
+                        <output expression="&quot;Benar selamat berhasil menebak dalam &quot; &amp; percobaan &amp; &quot; percobaan.&quot;" newline="True"/>
+                        <assign variable="menang" expression="True"/>
+                    </then>
+                    <else>
+                        <if expression="tebakan &lt; target">
+                            <then>
+                                <output expression="&quot;Terlalu kecil&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Terlalu besar&quot;" newline="True"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <if expression="menang == False">
+                <then>
+                    <output expression="&quot;kesempatan berakhir angka yang benanr yaitu &quot; &amp; target" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

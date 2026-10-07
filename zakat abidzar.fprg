@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="zakat abidzar"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-24 02:44:29 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI0OzAyOjE2OjQ0IFBNOzIxMDk="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI0OzAyOjQ0OjI5IFBNOzE7MjIyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="harta, nisab, zakat" type="Real" array="False" size=""/>
+            <output expression="&quot;masukkan total harta&quot;" newline="True"/>
+            <input variable="harta"/>
+            <output expression="&quot;masukkan nilai nisab: &quot;" newline="True"/>
+            <input variable="nisab"/>
+            <if expression="harta &gt;= nisab">
+                <then>
+                    <assign variable="zakat" expression="harta * 0.025"/>
+                    <output expression="&quot;zakat yang harus dibayar: &quot; &amp; zakat" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;harta belum mencapai nisab.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
