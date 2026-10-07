@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tugas mandiri"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-08-27 09:55:05 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI3OzA5OjI0OjIwIFBNOzIxMTI="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA4LTI3OzA5OjU1OjA1IFBNOzE7MjIyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan" type="Integer" array="False" size=""/>
+            <declare name="angka1, angka2, hasil" type="Real" array="False" size=""/>
+            <output expression="&quot;menu belajar matematika andi&quot;" newline="True"/>
+            <output expression="&quot;1. pertambahan&quot;" newline="True"/>
+            <output expression="&quot;2. pengurangan&quot;" newline="True"/>
+            <output expression="&quot;3. pembagian&quot;" newline="True"/>
+            <output expression="&quot;pilih menu (1/2/3)&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <output expression="&quot;masukkan angka pertama: &quot;" newline="True"/>
+            <input variable="angka1"/>
+            <output expression="&quot;masukkan angka kedua: &quot;" newline="True"/>
+            <input variable="angka2"/>
+            <if expression="pilihan == 1">
+                <then>
+                    <assign variable="hasil" expression="angka1 + angka2"/>
+                    <output expression="&quot;hasil : &quot;&amp;hasil" newline="True"/>
+                </then>
+                <else>
+                    <if expression="pilihan == 2">
+                        <then>
+                            <assign variable="hasil" expression="angka1 - angka2"/>
+                            <output expression="&quot;hasil : &quot;&amp;hasil" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="pilihan == 3">
+                                <then>
+                                    <assign variable="hasil" expression="angka1 / angka2"/>
+                                    <output expression="&quot;hasil : &quot;&amp;hasil" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="hasil" expression="angka1 * angka2"/>
+                                    <output expression="&quot;hasil diluar menu: &quot;&amp;hasil" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
