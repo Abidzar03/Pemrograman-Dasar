@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="perhitungan"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-03 03:01:36 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTAzOzAyOjI4OjAzIFBNOzIxMDU="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTAzOzAzOjAxOjM2IFBNOzE7MjIxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan" type="Integer" array="False" size=""/>
+            <declare name="angka1" type="Integer" array="False" size=""/>
+            <declare name="angka2" type="Integer" array="False" size=""/>
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <output expression="&quot;angka ke 1&quot;" newline="True"/>
+            <input variable="angka1"/>
+            <output expression="&quot;angka ke 2?&quot;" newline="True"/>
+            <input variable="angka2"/>
+            <output expression="&quot;nomer 1/2/3&quot;" newline="True"/>
+            <input variable="pilihan"/>
+            <if expression="pilihan == 1">
+                <then>
+                    <assign variable="hasil" expression="angka1 + angka2"/>
+                    <output expression="&quot;hasil operasi penambahan = &quot; &amp;hasil" newline="True"/>
+                </then>
+                <else>
+                    <if expression="pilihan == 2">
+                        <then>
+                            <assign variable="hasil" expression="angka1 - angka2"/>
+                            <output expression="&quot;hasil operasi pengurangan = &quot; &amp;hasil" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="pilihan == 3">
+                                <then>
+                                    <assign variable="hasil" expression="angka1/angka2"/>
+                                    <output expression="&quot;hasil operasi pembagian = &quot; &amp;hasil" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="hasil" expression="angka1*angka2"/>
+                                    <output expression="&quot;hasil operasi perkalian = &quot; &amp;hasil" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
