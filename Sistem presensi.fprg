@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Sistem presensi"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-23 11:32:55 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTIzOzExOjI0OjAwIFBNOzIxMDA="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTIzOzExOjMyOjU1IFBNOzE7MjIxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, status, jumlahHadir, jumlahTidakHadir" type="Integer" array="False" size=""/>
+            <declare name="persentase" type="Real" array="False" size=""/>
+            <assign variable="jumlahHadir" expression="0"/>
+            <assign variable="jumlahTidakHadir" expression="0"/>
+            <output expression="&quot;Masukkan jumlah mahasiswa:&quot;" newline="True"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="&quot;Masukkan status mahasiswa ke-&quot; &amp; i &amp; &quot; (1 = Hadir, 0 = Tidak Hadir):&quot;" newline="True"/>
+                <input variable="status"/>
+                <if expression="status == 1">
+                    <then>
+                        <assign variable="jumlahHadir" expression="jumlahHadir + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="jumlahTidakHadir" expression="jumlahTidakHadir + 1"/>
+                    </else>
+                </if>
+            </for>
+            <assign variable="persentase" expression="(jumlahHadir / n) * 100"/>
+            <output expression="&quot;Jumlah Hadir: &quot; &amp; jumlahHadir" newline="True"/>
+            <output expression="&quot;Jumlah Tidak Hadir: &quot; &amp; jumlahTidakHadir" newline="True"/>
+            <output expression="&quot;Persentase Kehadiran: &quot; &amp; persentase &amp; &quot;%&quot;" newline="True"/>
+            <if expression="persentase &gt;= 75">
+                <then>
+                    <output expression="&quot;Status: Memenuhi syarat&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Status: Tidak memenuhi syarat&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

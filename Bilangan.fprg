@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Bilangan"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-24 11:41:33 AM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzExOjI3OjE0IEFNOzIwOTQ="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzExOjQxOjMzIEFNOzE7MjE5OQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan angka:&quot;" newline="True"/>
+            <input variable="n"/>
+            <output expression="&quot;Bilangan 1 sampai &quot; &amp; n &amp; &quot;:&quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <output expression="i" newline="True"/>
+            </for>
+            <output expression="&quot;Bilangan genap:&quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <if expression="i % 2 == 0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Bilangan ganjil:&quot;" newline="True"/>
+            <for variable="i" start="1" end="n" direction="inc" step="1">
+                <if expression="i % 2 != 0">
+                    <then>
+                        <output expression="i" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

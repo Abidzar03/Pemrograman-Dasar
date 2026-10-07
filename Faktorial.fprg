@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Faktorial"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-24 11:53:14 AM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzExOjQ0OjIwIEFNOzIwOTA="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzExOjUzOjE0IEFNOzE7MjIwMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, i, faktorial" type="Integer" array="False" size=""/>
+            <declare name="teks" type="String" array="False" size=""/>
+            <assign variable="faktorial" expression="1"/>
+            <output expression="&quot;Masukkan angka:&quot;" newline="True"/>
+            <input variable="n"/>
+            <assign variable="teks" expression="n &amp; &quot;! = &quot;"/>
+            <for variable="i" start="n" end="1" direction="dec" step="1">
+                <assign variable="faktorial" expression="faktorial * i"/>
+                <if expression="i == 1">
+                    <then>
+                        <assign variable="teks" expression="teks &amp; i"/>
+                    </then>
+                    <else>
+                        <assign variable="teks" expression="teks &amp; i &amp; &quot;x&quot;"/>
+                    </else>
+                </if>
+            </for>
+            <output expression="teks" newline="True"/>
+            <output expression="n &amp; &quot;! = &quot; &amp; faktorial" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

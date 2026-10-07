@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Menu program"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-24 12:11:13 AM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTIzOzExOjM4OjQ3IFBNOzIxMTY="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzEyOjExOjEzIEFNOzE7MjE5NQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan, i, j, total" type="Integer" array="False" size=""/>
+            <do expression="pilihan != 5">
+                <output expression="&quot;===== MENU =====&quot;" newline="True"/>
+                <output expression="&quot;1. Menampilkan angka 1-10&quot;" newline="True"/>
+                <output expression="&quot;2. Menampilkan bilangan genap&quot;" newline="True"/>
+                <output expression="&quot;3. Menhitung jumlah 1-10&quot;" newline="True"/>
+                <output expression="&quot;4. Menggambar segitiga bintang&quot;" newline="True"/>
+                <output expression="&quot;5. Keluar&quot;" newline="True"/>
+                <output expression="&quot;Pilih menu (1-5):&quot;" newline="True"/>
+                <input variable="pilihan"/>
+                <if expression="pilihan == 1">
+                    <then>
+                        <for variable="i" start="1" end="10" direction="inc" step="1">
+                            <output expression="i &amp; &quot; &quot;" newline="False"/>
+                        </for>
+                    </then>
+                    <else>
+                        <if expression="pilihan == 2">
+                            <then>
+                                <for variable="i" start="1" end="10" direction="inc" step="1">
+                                    <if expression="i % 2 == 0">
+                                        <then>
+                                            <output expression="i &amp; &quot; &quot;" newline="False"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </for>
+                            </then>
+                            <else>
+                                <if expression="pilihan==3">
+                                    <then>
+                                        <assign variable="total" expression="0"/>
+                                        <for variable="i" start="1" end="10" direction="inc" step="1">
+                                            <assign variable="total" expression="total + i"/>
+                                        </for>
+                                        <output expression="&quot;Hasil penjumlahan = &quot; &amp; total" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <if expression="pilihan==4">
+                                            <then>
+                                                <for variable="i" start="1" end="5" direction="inc" step="1">
+                                                    <for variable="j" start="1" end="i" direction="inc" step="1">
+                                                        <output expression="&quot;*&quot;" newline="False"/>
+                                                    </for>
+                                                    <output expression="&quot;&quot;" newline="True"/>
+                                                </for>
+                                            </then>
+                                            <else>
+                                                <if expression="pilihan==5">
+                                                    <then>
+                                                        <output expression="&quot;Terima kasih, program selesai.&quot;" newline="True"/>
+                                                    </then>
+                                                    <else>
+                                                        <output expression="&quot;Pilihan tidak valid!&quot;" newline="True"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </do>
+        </body>
+    </function>
+</flowgorithm>

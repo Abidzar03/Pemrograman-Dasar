@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="menu pola bintang"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-24 01:39:30 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzEyOjM3OjAyIFBNOzIxMDg="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzAxOjM5OjMwIFBNOzE7MjIxNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan, tinggi, i, j, k" type="Integer" array="False" size=""/>
+            <do expression="pilihan &lt;&gt; 6">
+                <output expression="&quot;===== MENU POLA =====&quot;" newline="True"/>
+                <output expression="&quot;1. Segitiga&quot;" newline="True"/>
+                <output expression="&quot;2. Segitiga Terbalik&quot;" newline="True"/>
+                <output expression="&quot;3. Persegi&quot;" newline="True"/>
+                <output expression="&quot;4. Piramida&quot;" newline="True"/>
+                <output expression="&quot;5. Diamond&quot;" newline="True"/>
+                <output expression="&quot;6. Keluar&quot;" newline="True"/>
+                <output expression="&quot;Pilihan: &quot;" newline="True"/>
+                <input variable="pilihan"/>
+                <if expression="pilihan == 6">
+                    <then>
+                        <output expression="&quot;Terima kasih! Program selesai.&quot;" newline="True"/>
+                        <breakpoint expression="" always="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="pilihan &gt;= 1 &amp;&amp; pilihan &lt;= 5">
+                    <then>
+                        <output expression="&quot;Masukkan tinggi/ukuran: &quot;" newline="True"/>
+                        <input variable="tinggi"/>
+                        <if expression="pilihan == 1">
+                            <then>
+                                <for variable="i" start="1" end="tinggi" direction="inc" step="1">
+                                    <for variable="j" start="1" end="i" direction="inc" step="1">
+                                        <output expression="&quot;*&quot;" newline="False"/>
+                                    </for>
+                                    <output expression="&quot;&quot;" newline="True"/>
+                                </for>
+                            </then>
+                            <else>
+                                <if expression="pilihan == 2">
+                                    <then>
+                                        <for variable="i" start="tinggi" end="1" direction="dec" step="1">
+                                            <for variable="j" start="1" end="i" direction="inc" step="1">
+                                                <output expression="&quot;*&quot;" newline="False"/>
+                                            </for>
+                                            <output expression="&quot;&quot;" newline="True"/>
+                                        </for>
+                                    </then>
+                                    <else>
+                                        <if expression="pilihan == 3">
+                                            <then>
+                                                <for variable="i" start="1" end="tinggi" direction="inc" step="1">
+                                                    <for variable="j" start="1" end="tinggi" direction="inc" step="1">
+                                                        <output expression="&quot;*&quot;" newline="False"/>
+                                                    </for>
+                                                    <output expression="&quot;&quot;" newline="True"/>
+                                                </for>
+                                            </then>
+                                            <else>
+                                                <if expression="pilihan == 4">
+                                                    <then>
+                                                        <for variable="i" start="1" end="tinggi" direction="inc" step="1">
+                                                            <for variable="j" start="1" end="tinggi - i" direction="inc" step="1">
+                                                                <output expression="&quot; &quot;" newline="False"/>
+                                                            </for>
+                                                            <for variable="k" start="1" end="(2 * i) - 1" direction="inc" step="1">
+                                                                <output expression="&quot;*&quot;" newline="False"/>
+                                                            </for>
+                                                            <output expression="&quot;&quot;" newline="True"/>
+                                                        </for>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="pilihan == 5">
+                                                            <then>
+                                                                <for variable="i" start="1" end="tinggi" direction="inc" step="1">
+                                                                    <for variable="j" start="1" end="tinggi - i" direction="inc" step="1">
+                                                                        <output expression="&quot; &quot;" newline="False"/>
+                                                                    </for>
+                                                                    <for variable="k" start="1" end="(2 * i) - 1" direction="inc" step="1">
+                                                                        <output expression="&quot;*&quot;" newline="False"/>
+                                                                    </for>
+                                                                    <output expression="&quot;&quot;" newline="True"/>
+                                                                </for>
+                                                                <for variable="i" start="tinggi" end="1" direction="dec" step="1">
+                                                                    <for variable="j" start="1" end="tinggi - i" direction="inc" step="1">
+                                                                        <output expression="&quot; &quot;" newline="False"/>
+                                                                    </for>
+                                                                    <for variable="k" start="1" end="(2 * i) - 1" direction="inc" step="1">
+                                                                        <output expression="&quot;*&quot;" newline="False"/>
+                                                                    </for>
+                                                                    <output expression="&quot;&quot;" newline="True"/>
+                                                                </for>
+                                                            </then>
+                                                            <else>
+                                                                <output expression="&quot;Pilihan tidak valid!&quot;" newline="True"/>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <while expression="pilihan != 6"/>
+        </body>
+    </function>
+</flowgorithm>

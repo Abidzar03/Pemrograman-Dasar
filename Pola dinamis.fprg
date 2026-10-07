@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Pola dinamis"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-24 12:33:12 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzEyOjI1OjU3IFBNOzIxMTU="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTI0OzEyOjMzOjEyIFBNOzE7MjIxMw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tinggi, i, j, k" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan tinggi:&quot;" newline="True"/>
+            <input variable="tinggi"/>
+            <for variable="i" start="1" end="tinggi" direction="inc" step="1">
+                <for variable="j" start="1" end="tinggi - i" direction="inc" step="1">
+                    <output expression="&quot; &quot;" newline="False"/>
+                </for>
+                <for variable="k" start="1" end="(2 * i) - 1" direction="inc" step="1">
+                    <output expression="&quot;*&quot;" newline="False"/>
+                </for>
+                <output expression="&quot;&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
