@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TUGAS BAB 2 Abidzar EVALUASI TIPE DATA"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-08 10:52:25 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTA4OzEwOjExOjA3IFBNOzIxMDU="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTA4OzEwOjUyOjI1IFBNOzE7MjIxOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nim, kodeTransaksi, nomorTelepon" type="String" array="False" size=""/>
+            <declare name="jumlahDonasi" type="Integer" array="False" size=""/>
+            <assign variable="nim" expression="&quot;230101001&quot;"/>
+            <assign variable="kodeTransaksi" expression="&quot;00125&quot;"/>
+            <assign variable="nomorTelepon" expression="&quot;08123456789&quot;"/>
+            <assign variable="jumlahDonasi" expression="250000"/>
+            <output expression="&quot;TRANSAKSI DONASI&quot;" newline="True"/>
+            <output expression="&quot;kode transaksi: &quot;&amp;kodeTransaksi" newline="True"/>
+            <output expression="&quot;no.telpon:&quot;&amp;nomorTelepon" newline="True"/>
+            <output expression="&quot;jumlah donasi:RP&quot;&amp;jumlahDonasi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
