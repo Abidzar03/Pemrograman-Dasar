@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="seleksi bantuan pendidikan"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-12 12:46:59 AM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTExOzA3OjAzOjI0IEFNOzIwOTA="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTEyOzEyOjQ2OjU5IEFNOzI7MjIxMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ipk, penghasilan" type="Real" array="False" size=""/>
+            <declare name="tanggungan" type="Integer" array="False" size=""/>
+            <declare name="aktifSosial, beasiswaLain" type="Boolean" array="False" size=""/>
+            <input variable="ipk"/>
+            <input variable="penghasilan"/>
+            <input variable="tanggungan"/>
+            <input variable="aktifSosial"/>
+            <input variable="beasiswaLain"/>
+            <if expression="beasiswaLain == true">
+                <then>
+                    <output expression="&quot;tidak berhak (beasiswa ganda)&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="ipk &gt;= 3.50 &amp;&amp; penghasilan &lt;= 3000000 &amp;&amp; tanggungan &gt;= 3">
+                <then>
+                    <output expression="&quot;Prioritas Utama&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="ipk &gt;= 3.00 &amp;&amp; penghasilan &lt;= 5000000">
+                <then>
+                    <output expression="&quot;Prioritas Kedua&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="aktifSosial == true &amp;&amp; ipk &gt;= 3.00">
+                <then>
+                    <output expression="&quot;Pertimbangan Khusus&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Belum memenuhi prioritas&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
