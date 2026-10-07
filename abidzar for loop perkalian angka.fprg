@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="abidzar for loop perkalian angka"/>
+        <attribute name="authors" value="HYPE AMD"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-17 03:35:39 PM"/>
+        <attribute name="created" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTE3OzAzOjAyOjU0IFBNOzIxMDk="/>
+        <attribute name="edited" value="SFlQRSBBTUQ7QUJJRDsyMDI2LTA5LTE3OzAzOjM1OjM5IFBNOzI7MjIyNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="angka, isi, hasil" type="Integer" array="False" size=""/>
+            <output expression="&quot;masukkan angka&quot;" newline="True"/>
+            <input variable="angka"/>
+            <for variable="isi" start="1" end="10" direction="inc" step="1">
+                <assign variable="hasil" expression="angka * isi"/>
+                <output expression="angka &amp; &quot;x&quot; &amp; isi &amp; &quot;=&quot; &amp; hasil" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
